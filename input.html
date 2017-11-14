@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>	
+<script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+<input type="text" id="test">	
+</body>
+<script>
+$(document).ready(function(){
+    $("#test").keyup(function a (e) {
+      var obj = e;
+      if(obj.keyCode != 8){                                                        
+          var b = document.getElementById("test").value;        
+          var maxValue = 23;                                                       
+          //b = b.replace(/[^\d\s]/g,"");                                         
+          document.getElementById("test").value = b;              
+          //for(n=1;n<=4;n++){                                                
+             //if(b.length <=5*n-2||b.length>5*n-1){                    
+                 //b = b;
+             //}else{
+                 //b = b +" ";                                                          
+                 //document.getElementById("test").value = b;    
+             //}
+          //} 
+          if(b.length == 4){
+              b = b +" ";                                                          
+              document.getElementById("test").value = b;
+          }
+          if(b.length == 13){
+              b = b +" ";                                                          
+              document.getElementById("test").value = b;
+          }                     
+      }
+         
+    });  
+})
+
+</script>
+</html>
